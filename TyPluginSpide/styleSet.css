@@ -1,0 +1,143 @@
+/* Підключення шрифтів з Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Ubuntu+Condensed&display=swap');
+
+/* Загальні стилі для всього документу */
+body {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  margin: 20px;
+}
+
+/* Стилі для світлої теми */
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme textarea,
+.light-theme button {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+/* Стилі для темної теми */
+.dark-theme {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-theme textarea,
+.dark-theme button {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+/* Стилі для іконки кнопки */
+.IconBut {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px; /* Відступ з правого боку від нотатка */
+   transition: 0.4s;
+}
+
+.IconBut:hover{
+  transition: 0.2s;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Стилі для іконки "Видалити" */
+.delete-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+/* Стилі для переключення теми в залежності від системної теми браузера або Windows */
+@media (prefers-color-scheme: dark) {
+  /* Стилі для темної теми, якщо системна тема темна */
+  body {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  textarea,
+  button {
+    background-color: #555555;
+    color: #ffffff;
+  }
+}
+
+/* Стилі для списків */
+ul {
+  list-style-type: disc; /* Тип маркера для ненумерованих списків */
+  padding-left: 20px; /* Відступи зліва для списків */
+}
+
+ol {
+  list-style-type: decimal; /* Тип маркера для нумерованих списків */
+  padding-left: 20px; /* Відступи зліва для списків */
+}
+
+li {
+  transition: 0.5s;
+  font-size: 15px;
+  margin-bottom: 5px; /* Відступ між елементами списку */
+}
+
+/* Стилі для посилання на пошту та копірайту */
+a {
+  font-family: 'Caveat', cursive;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Стилі для копірайту */
+footer p {
+  font-family: 'Caveat', cursive;
+}
+
+/* Стилі для нотатків */
+#note {
+  font-size: 16px; /* Збільшуємо розмір шрифту для нотатків */
+  width: 100%; /* Заповнюємо весь доступний простір */
+  min-height: 100px; /* Мінімальна висота для текстового поля */
+  resize: vertical; /* Дозволяємо вертикальне змінення розміру поля */
+}
+
+/* Анімація підсвічування нотатки при наведенні */
+li:hover {
+  transition: 0.3s;
+  background-color: #555;
+  font-size: 16px;
+  margin: 10px;
+
+}
+
+/* Анімація зміни теми */
+@keyframes darkModeAnimation {
+  from {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  to {
+    background-color: #333333;
+    color: #ffffff;
+  }
+}
+
+/* Виклик анімації при переключенні теми */
+body[data-theme="dark"] {
+  animation: darkModeAnimation 0.5s ease;
+}

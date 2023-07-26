@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Нотаtки-Master",
+  "version": "5.3",
+  "description": "Нотаtки-Master - це потужний та зручний плагін для браузера, що допоможе вам легко зберігати й організовувати ваші нотатки. Чудовий інструмент для тих, хто хоче вести персональний щоденник, списки завдань, або зберігати важливі ідеї.        \n     Noтe-Master is a robust and convenient browser plugin designed to help you effortlessly store and organize your notes. It's an excellent tool for individuals who want to maintain a personal journal, manage to-do lists, or store important ideas.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["activeTab", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
